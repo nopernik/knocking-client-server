@@ -21,11 +21,11 @@ class z:
    
 def open_access(ip):
    print 'Opening %s' % ip   #do something with this ip like:  
-   #os.system('iptables -A INPUT -s %s -p 22 -j ACCEPT' % ip)
+   #os.system('iptables -A INPUT -s %s -p tcp --dport 22 -j ACCEPT' % ip)
 
 def close_access(ip):
    print 'Closing %s' % ip   #do something with this ip like:  
-   #os.system('iptables -D INPUT -s %s -p 22 -j ACCEPT' % ip)
+   #os.system('iptables -D INPUT -s %s -p tcp --dport 22 -j ACCEPT' % ip)
 
 def start_sniff(null):   
    def check(pkt):
